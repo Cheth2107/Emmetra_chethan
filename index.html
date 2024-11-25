@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick-Tock Challenge</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="gear gear1"></div>
+        <div class="gear gear2"></div>
+        <div class="gear gear3"></div>
+    </div>
+    <main>
+        <h1>Tick-Tock Challenge</h1>
+        <p class="tagline">Where Time Meets Challenge!</p>
+        <div class="clock-container">
+            <div class="clock analog">
+                <div class="hand hour"></div>
+                <div class="hand minute"></div>
+                <div class="hand second"></div>
+                <div class="center-dot"></div>
+            </div>
+            <div class="clock digital">
+                <span id="digital-time">00:00:00</span>
+            </div>
+        </div>
+        <div class="mode-selection">
+            <button id="analog-btn" class="mode-btn">Analog</button>
+            <button id="digital-btn" class="mode-btn">Digital</button>
+        </div>
+        <button id="start-btn" class="start-btn">Start Game</button>
+        <div id="main-screen" class="main-screen" style="display: none;">
+            <div id="attempts-left" class="attempts-bar">Attempts Left: 4/4</div>
+            <div id="clock-display" class="clock-container"></div>
+
+            <!-- Customization Options -->
+            <div id="options-container" class="options-container">
+                <button id="add-background" class="customization-btn">Add Background Image</button>
+                <button id="change-wall" class="customization-btn">Change Wall Color</button>
+                <button id="convert-mode" class="customization-btn">Convert Clock Mode</button>
+                <button id="change-shape" class="customization-btn">Change Clock Shape</button>
+            </div>
+
+            <!-- Hidden Inputs for Customization -->
+            <input type="file" id="background-image-upload" accept="image/*" style="display: none;">
+            <input type="color" id="color-picker" style="display: none;">
+        </div>
+
+        <!-- Puzzle Challenge Screen -->
+        <div id="puzzle-screen" class="puzzle-overlay" style="display: none;">
+            <div class="puzzle-panel">
+                <h2>Puzzle Challenge</h2>
+                <p id="puzzle-question"></p>
+                <div id="puzzle-options" class="puzzle-options"></div>
+                <button id="submit-puzzle" class="submit-btn">Submit</button>
+                <p id="puzzle-feedback" class="feedback-message" style="display: none;"></p>
+            </div>
+        </div>
+    </main> 
+
+    <!-- Bulb Icon for Light/Dark Mode -->
+    <div id="theme-toggle" class="theme-toggle">
+        <img id="bulb-icon" src="https://img.icons8.com/ios-filled/50/ffffff/sun.png" alt="theme-toggle" />
+    </div>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
